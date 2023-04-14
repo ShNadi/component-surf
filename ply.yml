@@ -8,5 +8,5 @@
       state: present
   - name: clone repo
     ansible.builtin.git:
-      repo: "{{ repo-url }}"
+      repo: "{{ repo_url }}"
       dest: /data/volume_2
