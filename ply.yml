@@ -1,0 +1,12 @@
+---
+- name: exercise playbook
+  hosts: server1
+  tasks:
+  - name: Install git
+    apt:
+      name: git
+      state: present
+  - name: clone repo
+    ansible.builtin.git:
+      repo: "{{ repo-url }}"
+      dest: /data/volume_2
